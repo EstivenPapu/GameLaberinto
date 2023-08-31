@@ -1,0 +1,145 @@
+.laberinto  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.celda {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.404);
+}
+.mensaje-victoria-final, .mensaje-victoria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #00ff00;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px;
+}
+.nivel{
+    font-family: fantasy;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.384);
+    color: white;
+    margin-bottom: 10px;
+}
+.btn button {
+    width: 60px;
+    height: 60px;
+    background-color:  rgba(0, 0, 0, 0.384);
+    border: none;
+    border-radius: 20%;
+    margin: 5px;
+    color: white;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.P {
+   
+    background: linear-gradient(45deg, #d9c3a1 25%, transparent 25%) -50px 0,
+    linear-gradient(-45deg, #d9c3a1 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, transparent 75%, #d9c3a1 75%) -50px 0,
+    linear-gradient(-45deg, transparent 75%, #d9c3a1 75%) -50px 0;
+    background-size: 100px 100px;
+    background-color: #f8f0e3;
+    color: rgba(255, 255, 255, 0);
+
+    border: none;
+}
+.C {
+    background-color: cadetblue;
+    color: cadetblue;
+    border: none;
+}
+.L{
+    color: yellow;
+    border: none;
+    animation: llegada 0.5s infinite ease-in-out;
+}
+
+.I{
+    background-color: cadetblue;
+    color: cadetblue;
+    border: none;
+}
+.J {
+    background-color: tomato;
+    color: tomato;
+    border: none;
+    animation: jugador 0.5s infinite ease-in-out;
+}
+.aling {
+    font-family: fantasy;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.384);
+    color: white;
+    
+}
+@keyframes llegada {
+    0% {
+        background-color: yellow;
+        color: yellow;
+    }
+    25%{
+        background-color: red;
+        color: red;
+    }
+    50%{
+        background-color: slateblue;
+        color: slateblue;
+    }
+    75%{
+        background-color: violet;
+        color: violet;
+    }
+    100%{
+        background-color: blue;
+        color: blue;
+    }
+
+}
+@keyframes jugador {
+    0%{
+        border-radius: 0%;
+    }
+    25%{
+        border-radius: 25%;
+    }
+
+    50%{
+       border-radius: 50%;
+    }
+    75%{
+      border-radius: 25%;
+    }
+    100%{
+      border-radius: 0%;
+    }
+}
